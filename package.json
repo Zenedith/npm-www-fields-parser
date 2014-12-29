@@ -1,0 +1,38 @@
+{
+  "name": "www-parser",
+  "version": "0.0.1",
+  "description": "Web page parser based on cheerio",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npm prune",
+    "test": "mocha test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks test/client/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zenedith/npm-www-parser.git"
+  },
+  "keywords": [
+    "web",
+    "www",
+    "parser",
+    "cheerio"
+  ],
+  "author": {
+    "name": "Zenedith",
+    "email": "zenedith@wp.pl"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zenedith/npm-www-parser/issues"
+  },
+  "homepage": "https://github.com/Zenedith/npm-www-parser",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "readme": "\n# www-parser\n\n Web page parser based on cheerio\n",
+  "readmeFilename": "Readme.md",
+  "_id": "www-parser@0.0.1",
+  "_from": "www-parser@^0.0.1"
+}
