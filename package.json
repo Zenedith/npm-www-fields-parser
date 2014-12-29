@@ -3,11 +3,23 @@
   "version": "0.0.1",
   "description": "Web page parser based on cheerio",
   "main": "index.js",
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "config": "^0.4.37",
+    "html-entities": "^1.1.1",
+    "log": "^1.4.0"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "istanbul": "^0.3.5",
+    "mocha": "^1.21.5",
+    "rewire": "^2.0.0"
+  },
   "scripts": {
     "prepublish": "npm prune",
-    "test": "mocha test/",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks test/client/",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks test/"
+    "test": "mocha test/*",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks test/*",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks test/*"
   },
   "repository": {
     "type": "git",
