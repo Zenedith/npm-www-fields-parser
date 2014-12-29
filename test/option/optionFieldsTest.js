@@ -2,6 +2,7 @@ var optionFields = require('../../lib/option/optionFields');
 var ParseOptions = require('../../lib/model/parseOptions').ParseOptions;
 var InvalidOptionFieldError = require('../../lib/error/invalidOptionFieldError').InvalidOptionFieldError;
 var InvalidOptionValueError = require('../../lib/error/invalidOptionValueError').InvalidOptionValueError;
+var ParseFieldSelector = require('../../lib/model/parseFieldSelector').ParseFieldSelector;
 var chai = require('chai');
 var should = chai.should();
 var expect = chai.expect;
@@ -34,14 +35,18 @@ describe('option fields test', function () {
     done();
   });
 
-  it('should parse selector type field', function (done) {
+  it('should parse "selector" type field', function (done) {
 
     var options = {
       fields: [
         {
           name: "name",
-          type: "selector",
-          selector: "#id"
+          steps: [
+            {
+              type: "selector",
+              selector: "#id"
+            }
+          ]
         }
       ]
     };
@@ -49,7 +54,11 @@ describe('option fields test', function () {
     var fields = optionFields.getOptionFields(options);
 
     expect(fields).to.be.not.empty();
-    expect(fields[0].selector).to.equal('#id');
+    expect(fields[0].name).to.equal('name');
+    expect(fields[0].steps).to.be.not.empty();
+    expect(fields[0].steps[0]).to.be.an.instanceof(ParseFieldSelector);
+    expect(fields[0].steps[0].selector).to.equal('#id');
+
     done();
   });
 
@@ -59,7 +68,11 @@ describe('option fields test', function () {
       fields: [
         {
           name: "name",
-          selector: "#id"
+          steps: [
+            {
+              selector: "#id"
+            }
+          ]
         }
       ]
     };
@@ -77,7 +90,11 @@ describe('option fields test', function () {
       fields: [
         {
           name: "name",
-          type: "selector"
+          steps: [
+            {
+              type: "selector"
+            }
+          ]
         }
       ]
     };
@@ -95,8 +112,12 @@ describe('option fields test', function () {
       fields: [
         {
           name: "name",
-          type: "selector",
-          selector: ""
+          steps: [
+            {
+              type: "selector",
+              selector: ""
+            }
+          ]
         }
       ]
     };
@@ -113,8 +134,12 @@ describe('option fields test', function () {
     var options = {
       fields: [
         {
-          type: "selector",
-          selector: "#id"
+          steps: [
+            {
+              type: "selector",
+              selector: "#id"
+            }
+          ]
         }
       ]
     };
@@ -132,12 +157,15 @@ describe('option fields test', function () {
       fields: [
         {
           name: "name",
-          type: "selector",
-          selector: "#id"
-        },
-        {
-          name: "unknownField",
-          type: "unknown"
+          steps: [
+            {
+              type: "selector",
+              selector: "#id"
+            },
+            {
+              type: "unknown"
+            }
+          ]
         }
       ]
     };
