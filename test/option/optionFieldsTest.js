@@ -35,6 +35,25 @@ describe('option fields test', function () {
     done();
   });
 
+  it('should throw error on empty "steps" options', function (done) {
+
+    var options = {
+      fields: [
+        {
+          name: "name",
+          steps: [
+          ]
+        }
+      ]
+    };
+
+    (function () {
+      optionFields.getOptionFields(options);
+    }).should.throw(InvalidOptionFieldError);
+
+    done();
+  });
+
   it('should parse "selector" type field', function (done) {
 
     var options = {
