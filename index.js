@@ -1,6 +1,7 @@
 var logger = require('./lib/logger/logger').logger;
 var optionFields = require('./lib/option/optionFields');
 var webContentParser = require('./lib/parser/webContentParser');
+var selectorStage = require('./lib/stage/selectorStage');
 
 var exports = {};
 
@@ -9,8 +10,9 @@ exports.parseContent = function (content, options, callback) {
 
   try {
     var fields = optionFields.getOptionFields(options);
+    var parserOptions = selectorStage.prepareContext(content);
 
-    return webContentParser.parse(content, fields, function (err, results) {
+    return webContentParser.parse(parserOptions, fields, function (err, results) {
 
       if (err) {
         logger.debug('Failed to parse content: ' + err);

@@ -4,6 +4,7 @@
   "description": "Web page parser based on cheerio",
   "main": "index.js",
   "dependencies": {
+    "async": "^0.9.0",
     "cheerio": "^0.17.0",
     "config": "^0.4.37",
     "html-entities": "^1.1.1",
