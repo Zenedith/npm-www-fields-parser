@@ -1,5 +1,4 @@
 var optionFields = require('../../lib/option/optionFields');
-//var ParseOptions = require('../../lib/model/parseOptions').ParseOptions;
 var InvalidOptionFieldError = require('../../lib/error/invalidOptionFieldError').InvalidOptionFieldError;
 var InvalidOptionValueError = require('../../lib/error/invalidOptionValueError').InvalidOptionValueError;
 var SelectorStage = require('../../lib/stage/selectorStage').SelectorStage;

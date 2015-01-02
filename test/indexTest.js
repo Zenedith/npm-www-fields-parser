@@ -42,10 +42,6 @@ describe('index test', function () {
     };
 
     index.parseContent(content, options, function (err, result) {
-
-//      console.log(err);
-//      console.log(result);
-
       should.exist(result);
       var results = result.getResults();
       expect(results).to.be.not.empty();
