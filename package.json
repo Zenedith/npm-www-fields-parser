@@ -43,7 +43,7 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "readme": "\n# www-fields-parser\n\n Web page parser based on cheerio\n",
+  "readme": "\n# www-fields-parser\n\n Web page fields parser based on cheerio\n",
   "readmeFilename": "Readme.md",
   "_id": "www-fields-parser@0.1.0",
   "_from": "www-fields-parser@^0.1.0"
