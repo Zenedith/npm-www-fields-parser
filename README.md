@@ -1,13 +1,38 @@
+# www-fields-parser
 [![Build Status](https://travis-ci.org/Zenedith/npm-www-fields-parser.svg)](https://travis-ci.org/Zenedith/npm-www-fields-parser)
 [![Coverage Status](https://coveralls.io/repos/Zenedith/npm-www-fields-parser/badge.png)](https://coveralls.io/r/Zenedith/npm-www-fields-parser)
-npm-www-fields-parser
-===========
 
-Web page fields parser based on cheerio
+Web page parser based on cheerio
 
 ## Installation
 
-    $ npm install www-fields-parser
+Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
+
+```sh
+npm install www-fields-parser --save
+```
+
+
+## Tests
+
+```sh
+npm install
+npm test
+```
+
+## Dependencies
+
+- [async](https://github.com/caolan/async): Higher-order functions and common patterns for asynchronous code
+- [cheerio](https://github.com/cheeriojs/cheerio): Tiny, fast, and elegant implementation of core jQuery designed specifically for the server
+- [html-entities](https://github.com/mdevils/node-html-entities): Faster HTML entities encode/decode library.
+- [log](https://github.com/Zenedith/npm-www-fields-parser.git): Tiny logger with streaming reader
+
+## Dev Dependencies
+
+- [chai](https://github.com/chaijs/chai): BDD/TDD assertion library for node.js and the browser. Test framework agnostic.
+- [istanbul](https://github.com/gotwarlost/istanbul): Yet another JS code coverage tool that computes statement, line, function and branch coverage with module loader hooks to transparently add coverage when running tests. Supports all JS coverage use cases including unit tests, server side functional tests
+- [mocha](https://github.com/mochajs/mocha): simple, flexible, fun test framework
+
 
 ## License
 The MIT License (MIT)

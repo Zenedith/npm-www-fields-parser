@@ -1,6 +1,6 @@
 {
   "name": "www-fields-parser",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Web page parser based on cheerio",
   "main": "index.js",
   "dependencies": {
@@ -49,8 +49,7 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "readme": "\n# www-fields-parser\n\n Web page fields parser based on cheerio\n",
   "readmeFilename": "README.md",
-  "_id": "www-fields-parser@0.1.1",
-  "_from": "www-fields-parser@^0.1.1"
+  "_id": "www-fields-parser@0.1.2",
+  "_from": "www-fields-parser@^0.1.2"
 }
