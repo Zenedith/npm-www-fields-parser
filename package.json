@@ -1,20 +1,18 @@
 {
-  "name": "www-parser",
-  "version": "0.0.1",
+  "name": "www-fields-parser",
+  "version": "0.1.0",
   "description": "Web page parser based on cheerio",
   "main": "index.js",
   "dependencies": {
     "async": "^0.9.0",
-    "cheerio": "^0.17.0",
-    "config": "^0.4.37",
+    "cheerio": "^0.18.0",
     "html-entities": "^1.1.1",
     "log": "^1.4.0"
   },
   "devDependencies": {
     "chai": "^1.10.0",
     "istanbul": "^0.3.5",
-    "mocha": "^1.21.5",
-    "rewire": "^2.0.0"
+    "mocha": "^2.1.0"
   },
   "scripts": {
     "prepublish": "npm prune",
@@ -24,11 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zenedith/npm-www-parser.git"
+    "url": "https://github.com/Zenedith/npm-www-fields-parser.git"
   },
   "keywords": [
     "web",
     "www",
+    "field",
     "parser",
     "cheerio"
   ],
@@ -38,14 +37,14 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Zenedith/npm-www-parser/issues"
+    "url": "https://github.com/Zenedith/npm-www-fields-parser/issues"
   },
-  "homepage": "https://github.com/Zenedith/npm-www-parser",
+  "homepage": "https://github.com/Zenedith/npm-www-fields-parser",
   "engines": {
     "node": ">=0.10.0"
   },
-  "readme": "\n# www-parser\n\n Web page parser based on cheerio\n",
+  "readme": "\n# www-fields-parser\n\n Web page parser based on cheerio\n",
   "readmeFilename": "Readme.md",
-  "_id": "www-parser@0.0.1",
-  "_from": "www-parser@^0.0.1"
+  "_id": "www-fields-parser@0.1.0",
+  "_from": "www-fields-parser@^0.1.0"
 }
