@@ -20,6 +20,12 @@
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks test/*",
     "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks test/*"
   },
+  "files": [
+    "lib/",
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Zenedith/npm-www-fields-parser.git"
@@ -44,7 +50,7 @@
     "node": ">=0.10.0"
   },
   "readme": "\n# www-fields-parser\n\n Web page fields parser based on cheerio\n",
-  "readmeFilename": "Readme.md",
+  "readmeFilename": "README.md",
   "_id": "www-fields-parser@0.1.0",
   "_from": "www-fields-parser@^0.1.0"
 }
