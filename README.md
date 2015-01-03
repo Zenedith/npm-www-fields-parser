@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Zenedith/npm-www-fields-parser.svg?branch=poc)](https://travis-ci.org/Zenedith/npm-www-fields-parser)
+[![Build Status](https://travis-ci.org/Zenedith/npm-www-fields-parser.svg)](https://travis-ci.org/Zenedith/npm-www-fields-parser)
 [![Coverage Status](https://coveralls.io/repos/Zenedith/npm-www-fields-parser/badge.png)](https://coveralls.io/r/Zenedith/npm-www-fields-parser)
 npm-www-fields-parser
 ===========
