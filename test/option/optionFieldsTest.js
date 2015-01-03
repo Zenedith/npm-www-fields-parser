@@ -39,7 +39,7 @@ describe('option fields test', function () {
     var options = {
       fields: [
         {
-          name: "name",
+          name: 'name',
           stages: [
           ]
         }
@@ -58,11 +58,11 @@ describe('option fields test', function () {
     var options = {
       fields: [
         {
-          name: "name",
+          name: 'name',
           stages: [
             {
-              type: "selector",
-              selector: "#id"
+              type: 'selector',
+              selector: '#id'
             }
           ]
         }
@@ -86,10 +86,10 @@ describe('option fields test', function () {
     var options = {
       fields: [
         {
-          name: "name",
+          name: 'name',
           stages: [
             {
-              selector: "#id"
+              selector: '#id'
             }
           ]
         }
@@ -108,10 +108,10 @@ describe('option fields test', function () {
     var options = {
       fields: [
         {
-          name: "name",
+          name: 'name',
           stages: [
             {
-              type: "selector"
+              type: 'selector'
             }
           ]
         }
@@ -130,11 +130,11 @@ describe('option fields test', function () {
     var options = {
       fields: [
         {
-          name: "name",
+          name: 'name',
           stages: [
             {
-              type: "selector",
-              selector: ""
+              type: 'selector',
+              selector: ''
             }
           ]
         }
@@ -155,8 +155,8 @@ describe('option fields test', function () {
         {
           stages: [
             {
-              type: "selector",
-              selector: "#id"
+              type: 'selector',
+              selector: '#id'
             }
           ]
         }
@@ -175,14 +175,14 @@ describe('option fields test', function () {
     var options = {
       fields: [
         {
-          name: "name",
+          name: 'name',
           stages: [
             {
-              type: "selector",
-              selector: "#id"
+              type: 'selector',
+              selector: '#id'
             },
             {
-              type: "unknown"
+              type: 'unknown'
             }
           ]
         }

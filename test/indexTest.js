@@ -24,17 +24,17 @@ describe('index test', function () {
     var options = {
       fields: [
         {
-          name: "id_selector_with_entities_and_trim_stages",
+          name: 'id_selector_with_entities_and_trim_stages',
           stages: [
             {
-              type: "selector",
-              selector: "#id"
+              type: 'selector',
+              selector: '#id'
             },
             {
-              type: "entities"
+              type: 'entities'
             },
             {
-              type: "trim"
+              type: 'trim'
             }
           ]
         }
