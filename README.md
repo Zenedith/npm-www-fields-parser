@@ -25,7 +25,7 @@ npm test
 - [async](https://github.com/caolan/async): Higher-order functions and common patterns for asynchronous code
 - [cheerio](https://github.com/cheeriojs/cheerio): Tiny, fast, and elegant implementation of core jQuery designed specifically for the server
 - [html-entities](https://github.com/mdevils/node-html-entities): Faster HTML entities encode/decode library.
-- [log](https://github.com/Zenedith/npm-www-fields-parser.git): Tiny logger with streaming reader
+- [winston](https://github.com/flatiron/winston): A multi-transport async logging library for Node.js
 
 ## Dev Dependencies
 
