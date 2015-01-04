@@ -1,18 +1,25 @@
 var logger = require('./lib/logger/logger');
 var log = logger.logger;
 var optionFields = require('./lib/option/optionFields');
-var optionLog = require('./lib/option/optionLog');
+var OptionLog = require('./lib/option/optionLog').OptionLog;
 var webContentParser = require('./lib/parser/webContentParser');
 var selectorStage = require('./lib/stage/selectorStage');
 
 var exports = {};
 
 exports.parseContent = function (content, options, callback) {
-  var logLevel = optionLog.getOptionLogLevel(options);
+
+  var optionLog = new OptionLog(options);
+  var logLevel = optionLog.getOptionLogLevel();
+//  var instance = optionLog.getLogInstance();
 
   if (logLevel !== null) {
-    logger.initLogger(logLevel);
+    logger.changeLogLevel(logLevel);
   }
+
+//  if (instance !== null) {
+//    logger.changeLoggerInstance(instance);
+//  }
 
   try {
     var fields = optionFields.getOptionFields(options);
