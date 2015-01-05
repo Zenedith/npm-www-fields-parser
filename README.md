@@ -1,8 +1,12 @@
 # www-fields-parser
-[![Build Status](https://travis-ci.org/Zenedith/npm-www-fields-parser.svg)](https://travis-ci.org/Zenedith/npm-www-fields-parser)
+[![npm version](https://badge.fury.io/js/www-fields-parser.svg)](http://badge.fury.io/js/www-fields-parser)
 [![Coverage Status](https://coveralls.io/repos/Zenedith/npm-www-fields-parser/badge.png)](https://coveralls.io/r/Zenedith/npm-www-fields-parser)
+[![Build Status](https://travis-ci.org/Zenedith/npm-www-fields-parser.svg)](https://travis-ci.org/Zenedith/npm-www-fields-parser)
 
-Web page parser based on cheerio
+[![NPM](https://nodei.co/npm/www-fields-parser.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/www-fields-parser/)
+
+
+Web page fields parser based on cheerio
 
 ## Installation
 
@@ -32,6 +36,11 @@ npm test
 - [chai](https://github.com/chaijs/chai): BDD/TDD assertion library for node.js and the browser. Test framework agnostic.
 - [istanbul](https://github.com/gotwarlost/istanbul): Yet another JS code coverage tool that computes statement, line, function and branch coverage with module loader hooks to transparently add coverage when running tests. Supports all JS coverage use cases including unit tests, server side functional tests
 - [mocha](https://github.com/mochajs/mocha): simple, flexible, fun test framework
+
+
+## Changelog
+
+[CHANGELOG](CHANGELOG.md)
 
 
 ## License
