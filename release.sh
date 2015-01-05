@@ -1,15 +1,17 @@
 #!/bin/bash
 
 # after merge pull request
-description="$1"
+tag="$1"
+description="$2"
 
-if [ $# -lt 1 ];then
-  echo "usage: $0 \$description"
+if [ $# -lt 2 ];then
+  echo "usage: $0 \$tag \$description"
   exit 1
 fi
 
 function gitTag() {
-  echo "git tag stage\n"
+  echo "git tag stage"
+  echo
   local tag="$1"
   git-release $tag
 }
@@ -19,23 +21,24 @@ function packageProperty() {
   echo `npm view . $field`
 }
 
-
 function githubRelease() {
-  echo "github release stage\n"
+  echo "github release stage"
+  echo
   local tag="$1"
   local description="$2"
-  local repo=`packageProperty "name"`
+  local name=`packageProperty "name"`
+  local repo="npm-$name"
 
-  echo "github release $repo"
+  echo "github release for \"$repo\" in version \"$tag\""
+  echo
 
   github-release release \
     --user "zenedith" \
     --repo "$repo" \
-    --tag $tag \
+    --tag "$tag" \
     --name "Release $tag" \
     --description "$description"
 }
 
-tag=`packageProperty "version"`
-gitTag $tag
-githubRelease $tag $description
+gitTag "$tag"
+githubRelease "$tag" "$description"
