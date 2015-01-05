@@ -1,3 +1,10 @@
+0.1.4 / 2015-01-05
+==================
+
+  * Updated README.md
+  * Added CHANGELOG.md
+  * Added helper script for git release
+
 0.1.3 / 2015-01-04
 ==================
 
