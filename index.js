@@ -11,19 +11,21 @@ exports.parseContent = function (content, options, callback) {
 
   var optionLog = new OptionLog(options);
   var logLevel = optionLog.getOptionLogLevel();
-//  var instance = optionLog.getLogInstance();
 
   if (logLevel !== null) {
     logger.changeLogLevel(logLevel);
   }
 
-//  if (instance !== null) {
-//    logger.changeLoggerInstance(instance);
-//  }
+  content = content.replace("\r", '');
+  content = content.replace("\n", '');
 
   try {
+    var parserOptions = {
+      content: content
+    };
+
     var fields = optionFields.getOptionFields(options);
-    var parserOptions = selectorStage.prepareContext(content);
+    selectorStage.prepareContext(parserOptions, content);
 
     return webContentParser.parse(parserOptions, fields, function (err, results) {
 

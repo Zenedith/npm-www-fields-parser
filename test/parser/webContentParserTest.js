@@ -38,7 +38,8 @@ describe('web content parser test', function () {
       )
     ];
 
-    var options = selectorStage.prepareContext(content);
+    var options = {};
+    selectorStage.prepareContext(options, content);
 
     webContentParser.parse(options, fields, function (err, result) {
       should.exist(result);
