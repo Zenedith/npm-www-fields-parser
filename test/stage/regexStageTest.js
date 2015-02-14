@@ -11,8 +11,8 @@ describe('Regex stage test', function () {
       content: '<html><p><span>Engine power: </span> <strong> <span class="value">55 kW </span> </strong></p></html>'
     };
 
-    var regexStage = new RegexStage();
-    regexStage.execute('<.+>Engine power: </.+>.+<.+ class="value">(.+?)</.+>', options, function (err, result) {
+    var regexStage = new RegexStage('<.+>Engine power: </.+>.+<.+ class="value">(.+?)</.+>');
+    regexStage.execute('', options, function (err, result) {
       should.not.exist(err);
       expect(result).to.equal('55 kW ');
       done();
