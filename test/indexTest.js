@@ -45,10 +45,124 @@ describe('index test', function () {
     index.parseContent(content, options, function (err, result) {
       should.exist(result);
       var results = result.getResults();
-//      expect(results).to.be.not.empty();
+      expect(results).to.be.not.empty;
       should.exist(results[0]);
       expect(results[0].getName()).to.equal('id_selector_with_entities_and_trim_stages');
       expect(results[0].getValue()).to.equal('value <>');
+      done();
+    });
+  });
+
+  it('should use val handler for selector', function (done) {
+
+    var content = '<input id="id" value="val">value</input>';
+    var options = {
+      fields: [
+        {
+          name: 'input_id_selector',
+          stages: [
+            {
+              type: 'selector',
+              opts: ['#id', null, 'val']
+            }
+          ]
+        }
+      ]
+    };
+
+    index.parseContent(content, options, function (err, result) {
+      should.exist(result);
+      var results = result.getResults();
+      expect(results).to.be.not.empty;
+      should.exist(results[0]);
+      expect(results[0].getName()).to.equal('input_id_selector');
+      expect(results[0].getValue()).to.equal('val');
+      done();
+    });
+  });
+
+  it('should use last val handler for selector', function (done) {
+
+    var content = '<input class="class" value="vala">value</input><input class="class" value="las">last</input>';
+    var options = {
+      fields: [
+        {
+          name: 'input_last_class_selector',
+          stages: [
+            {
+              type: 'selector',
+              opts: ['.class', null, ['last', 'val']]
+            }
+          ]
+        }
+      ]
+    };
+
+    index.parseContent(content, options, function (err, result) {
+      should.exist(result);
+      var results = result.getResults();
+      expect(results).to.be.not.empty;
+      should.exist(results[0]);
+      expect(results[0].getName()).to.equal('input_last_class_selector');
+      expect(results[0].getValue()).to.equal('las');
+      done();
+    });
+  });
+
+  it('should use val handler for selector', function (done) {
+
+    var content = '<input class="class" value="vala">value</input><input class="class" value="las">last</input>';
+    var options = {
+      fields: [
+        {
+          name: 'input_class_selector',
+          stages: [
+            {
+              type: 'selector',
+              opts: ['.class', null, 'val']
+            }
+          ]
+        }
+      ]
+    };
+
+    index.parseContent(content, options, function (err, result) {
+      should.exist(result);
+      var results = result.getResults();
+      expect(results).to.be.not.empty;
+      should.exist(results[0]);
+      expect(results[0].getName()).to.equal('input_class_selector');
+      expect(results[0].getValue()).to.be.not.empty;
+      expect(results[0].getValue()[0]).to.equal('vala');
+      expect(results[0].getValue()[1]).to.equal('las');
+      done();
+    });
+  });
+
+  it('should use attr handler for selector', function (done) {
+
+    var content = '<img src="/image.png" alt=""/>';
+    var options = {
+      fields: [
+        {
+          name: 'img_src_attr',
+          stages: [
+            {
+              type: 'selector',
+              opts: ['img', null, 'attr=src']
+            }
+          ]
+        }
+      ]
+    };
+
+    index.parseContent(content, options, function (err, result) {
+      should.exist(result);
+      var results = result.getResults();
+      expect(results).to.be.not.empty;
+      should.exist(results[0]);
+      expect(results[0].getName()).to.equal('img_src_attr');
+      expect(results[0].getValue()).to.equal('/image.png');
       done();
     });
   });
@@ -121,7 +235,7 @@ describe('index test', function () {
                       stages: [
                         {
                           type: 'selector',
-                          opts: ['.image img|src']
+                          opts: ['.image img', null, 'attr=src']
                         }
                       ]
                     },

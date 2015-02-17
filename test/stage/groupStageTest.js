@@ -32,7 +32,7 @@ describe('Group stage test', function () {
           stages: [
             {
               type: 'selector',
-              opts: ['.image img|src']
+              opts: ['.image img', null, ['attr=src']]
             }
           ]
         },
