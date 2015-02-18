@@ -62,7 +62,7 @@ describe('option fields test', function () {
           stages: [
             {
               type: 'selector',
-              selector: '#id'
+              opts: ['#id']
             }
           ]
         }
@@ -71,10 +71,10 @@ describe('option fields test', function () {
 
     var fields = optionFields.getOptionFields(options);
 
-    expect(fields).to.be.not.empty();
+    expect(fields).to.have.length(1);
     expect(fields[0].getName()).to.equal('name');
     var stages = fields[0].getStages();
-    expect(stages).to.be.not.empty();
+    expect(stages).to.have.length(1);
     expect(stages[0]).to.be.an.instanceof(SelectorStage);
     expect(stages[0].getSelector()).to.equal('#id');
 
@@ -89,7 +89,7 @@ describe('option fields test', function () {
           name: 'name',
           stages: [
             {
-              selector: '#id'
+              opts: ['#id']
             }
           ]
         }
@@ -103,7 +103,7 @@ describe('option fields test', function () {
     done();
   });
 
-  it('should throw error on missing "selector" field', function (done) {
+  it('should throw error on missing "opts" field for selector', function (done) {
 
     var options = {
       fields: [
@@ -125,7 +125,7 @@ describe('option fields test', function () {
     done();
   });
 
-  it('should throw error on empty "selector" field', function (done) {
+  it('should throw error on empty "opts" field for selector', function (done) {
 
     var options = {
       fields: [
@@ -134,7 +134,7 @@ describe('option fields test', function () {
           stages: [
             {
               type: 'selector',
-              selector: ''
+              opts: []
             }
           ]
         }
@@ -156,7 +156,7 @@ describe('option fields test', function () {
           stages: [
             {
               type: 'selector',
-              selector: '#id'
+              opts: ['#id']
             }
           ]
         }
@@ -179,7 +179,7 @@ describe('option fields test', function () {
           stages: [
             {
               type: 'selector',
-              selector: '#id'
+              opts: ['#id']
             },
             {
               type: 'unknown'
@@ -191,7 +191,7 @@ describe('option fields test', function () {
 
     var fields = optionFields.getOptionFields(options);
 
-    expect(fields).to.be.not.empty();
+    expect(fields).to.have.length(1);
     done();
   });
 

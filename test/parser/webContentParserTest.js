@@ -38,12 +38,13 @@ describe('web content parser test', function () {
       )
     ];
 
-    var options = selectorStage.prepareContext(content);
+    var options = {};
+    selectorStage.prepareContext(options, content);
 
     webContentParser.parse(options, fields, function (err, result) {
       should.exist(result);
       var results = result.getResults();
-      expect(results).to.be.not.empty();
+      expect(results).to.have.length(1);
       should.exist(results[0]);
       expect(results[0].getName()).to.equal('id_selector_with_entities_and_trim_stages');
       expect(results[0].getValue()).to.equal('value <>');
