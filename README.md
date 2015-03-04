@@ -3,6 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/Zenedith/npm-www-fields-parser/badge.png)](https://coveralls.io/r/Zenedith/npm-www-fields-parser)
 [![Build Status](https://travis-ci.org/Zenedith/npm-www-fields-parser.svg)](https://travis-ci.org/Zenedith/npm-www-fields-parser)
 [![Dependency Status](https://david-dm.org/Zenedith/npm-www-fields-parser.svg)](https://david-dm.org/Zenedith/npm-www-fields-parser)
+[![devDependency Status](https://david-dm.org/Zenedith/npm-www-fields-parser/dev-status.svg)](https://david-dm.org/Zenedith/npm-www-fields-parser#info=devDependencies)
 
 [![NPM](https://nodei.co/npm/www-fields-parser.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/www-fields-parser/)
 
@@ -27,6 +28,7 @@ npm test
 
 ## Dependencies
 
+- [assert-plus](https://github.com/mcavage/node-assert-plus): Extra assertions on top of node&#39;s assert module
 - [async](https://github.com/caolan/async): Higher-order functions and common patterns for asynchronous code
 - [cheerio](https://github.com/cheeriojs/cheerio): Tiny, fast, and elegant implementation of core jQuery designed specifically for the server
 - [html-entities](https://github.com/mdevils/node-html-entities): Faster HTML entities encode/decode library.
