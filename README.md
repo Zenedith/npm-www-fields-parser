@@ -1,5 +1,6 @@
 # www-fields-parser
 [![npm version](https://badge.fury.io/js/www-fields-parser.svg)](http://badge.fury.io/js/www-fields-parser)
+[![bitHound Score](https://www.bithound.io/github/Zenedith/npm-www-fields-parser/badges/score.svg)](https://www.bithound.io/github/Zenedith/npm-www-fields-parser)
 [![Coverage Status](https://coveralls.io/repos/Zenedith/npm-www-fields-parser/badge.png)](https://coveralls.io/r/Zenedith/npm-www-fields-parser)
 [![Build Status](https://travis-ci.org/Zenedith/npm-www-fields-parser.svg)](https://travis-ci.org/Zenedith/npm-www-fields-parser)
 [![Dependency Status](https://david-dm.org/Zenedith/npm-www-fields-parser.svg)](https://david-dm.org/Zenedith/npm-www-fields-parser)
