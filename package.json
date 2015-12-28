@@ -1,19 +1,19 @@
 {
   "name": "www-fields-parser",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Web page parser based on cheerio",
   "main": "index.js",
   "dependencies": {
-    "assert-plus": "^0.1.5",
+    "assert-plus": "^0.2.0",
     "async": "^1.5.0",
     "cheerio": "^0.19.0",
     "html-entities": "^1.2.0",
-    "winston": "^2.0.0"
+    "winston": "^2.1.1"
   },
   "devDependencies": {
-    "chai": "^3.4.0",
-    "istanbul": "^0.4.0",
-    "mocha": "^2.3.3"
+    "chai": "^3.4.1",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4"
   },
   "scripts": {
     "prepublish": "npm prune",
@@ -51,6 +51,6 @@
     "node": ">=0.10.0"
   },
   "readmeFilename": "README.md",
-  "_id": "www-fields-parser@0.1.8",
-  "_from": "www-fields-parser@^0.1.8"
+  "_id": "www-fields-parser@0.1.9",
+  "_from": "www-fields-parser@^0.1.9"
 }
