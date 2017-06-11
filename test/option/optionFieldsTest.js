@@ -13,10 +13,7 @@ describe('option fields test', function () {
     var options = {
     };
 
-    (function () {
-      optionFields.getOptionFields(options);
-    }).should.throw(InvalidOptionValueError);
-
+    expect(optionFields.getOptionFields(options)).to.throw(InvalidOptionValueError);
     done();
   });
 
@@ -27,9 +24,7 @@ describe('option fields test', function () {
       ]
     };
 
-    (function () {
-      optionFields.getOptionFields(options);
-    }).should.throw(InvalidOptionValueError);
+    expect(optionFields.getOptionFields(options)).to.throw(InvalidOptionValueError);
 
     done();
   });
@@ -46,9 +41,7 @@ describe('option fields test', function () {
       ]
     };
 
-    (function () {
-      optionFields.getOptionFields(options);
-    }).should.throw(InvalidOptionFieldError);
+    expect(optionFields.getOptionFields(options)).to.throw(InvalidOptionFieldError);
 
     done();
   });
@@ -96,9 +89,7 @@ describe('option fields test', function () {
       ]
     };
 
-    (function () {
-      optionFields.getOptionFields(options);
-    }).should.throw(InvalidOptionFieldError);
+    expect(optionFields.getOptionFields(options)).to.throw(InvalidOptionFieldError);
 
     done();
   });
@@ -118,9 +109,7 @@ describe('option fields test', function () {
       ]
     };
 
-    (function () {
-      optionFields.getOptionFields(options);
-    }).should.throw(InvalidOptionFieldError);
+    expect(optionFields.getOptionFields(options)).to.throw(InvalidOptionFieldError);
 
     done();
   });
@@ -141,9 +130,7 @@ describe('option fields test', function () {
       ]
     };
 
-    (function () {
-      optionFields.getOptionFields(options);
-    }).should.throw(InvalidOptionFieldError);
+    expect(optionFields.getOptionFields(options)).to.throw(InvalidOptionFieldError);
 
     done();
   });
@@ -163,9 +150,7 @@ describe('option fields test', function () {
       ]
     };
 
-    (function () {
-      optionFields.getOptionFields(options);
-    }).should.throw(InvalidOptionFieldError);
+    expect(optionFields.getOptionFields(options)).to.throw(InvalidOptionFieldError);
 
     done();
   });

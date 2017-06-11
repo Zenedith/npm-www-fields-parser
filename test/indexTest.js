@@ -302,18 +302,18 @@ describe('index test', function () {
       var value = results[0].getValue();
 
       expect(value).to.have.length(2);
-      expect(value).to.have.deep.property('[0].name', 'name of task');
-      expect(value).to.have.deep.property('[0].image', '/image.png');
-      expect(value).to.have.deep.property('[0].description', 'Task description');
+      expect(value).to.have.nested.property('[0].name', 'name of task');
+      expect(value).to.have.nested.property('[0].image', '/image.png');
+      expect(value).to.have.nested.property('[0].description', 'Task description');
       should.not.exist(value[0].once);
-      expect(value).to.have.deep.property('[0].socket', 'Task socket');
-      expect(value).to.have.deep.property('[0].file', 'Task file');
+      expect(value).to.have.nested.property('[0].socket', 'Task socket');
+      expect(value).to.have.nested.property('[0].file', 'Task file');
       should.not.exist(value[0].notexists);
 
-      expect(value).to.have.deep.property('[1].name', 'name2 of task');
-      expect(value).to.have.deep.property('[1].image', '/image2.png');
-      expect(value).to.have.deep.property('[1].description', 'Task2 description');
-      expect(value).to.have.deep.property('[1].once', 'Task2 once');
+      expect(value).to.have.nested.property('[1].name', 'name2 of task');
+      expect(value).to.have.nested.property('[1].image', '/image2.png');
+      expect(value).to.have.nested.property('[1].description', 'Task2 description');
+      expect(value).to.have.nested.property('[1].once', 'Task2 once');
       should.not.exist(value[1].socket);
       should.not.exist(value[1].file);
       should.not.exist(value[1].notexists);

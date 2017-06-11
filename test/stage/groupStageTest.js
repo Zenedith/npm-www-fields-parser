@@ -89,18 +89,18 @@ describe('Group stage test', function () {
       should.not.exist(err);
 
       expect(result).to.have.length(2);
-      expect(result).to.have.deep.property('[0].name', 'name of task');
-      expect(result).to.have.deep.property('[0].image', '/image.png');
-      expect(result).to.have.deep.property('[0].description', 'Task description');
+      expect(result).to.have.nested.property('[0].name', 'name of task');
+      expect(result).to.have.nested.property('[0].image', '/image.png');
+      expect(result).to.have.nested.property('[0].description', 'Task description');
       should.not.exist(result[0].once);
-      expect(result).to.have.deep.property('[0].socket', 'Task socket');
-      expect(result).to.have.deep.property('[0].file', 'Task file');
+      expect(result).to.have.nested.property('[0].socket', 'Task socket');
+      expect(result).to.have.nested.property('[0].file', 'Task file');
       should.not.exist(result[0].notexists);
 
-      expect(result).to.have.deep.property('[1].name', 'name2 of task');
-      expect(result).to.have.deep.property('[1].image', '/image2.png');
-      expect(result).to.have.deep.property('[1].description', 'Task2 description');
-      expect(result).to.have.deep.property('[1].once', 'Task2 once');
+      expect(result).to.have.nested.property('[1].name', 'name2 of task');
+      expect(result).to.have.nested.property('[1].image', '/image2.png');
+      expect(result).to.have.nested.property('[1].description', 'Task2 description');
+      expect(result).to.have.nested.property('[1].once', 'Task2 once');
       should.not.exist(result[1].socket);
       should.not.exist(result[1].file);
       should.not.exist(result[1].notexists);
