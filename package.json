@@ -11,9 +11,9 @@
     "winston": "2.3.1"
   },
   "devDependencies": {
-    "chai": "4.0.2",
+    "chai": "^4.1.1",
     "istanbul": "0.4.5",
-    "mocha": "3.4.2"
+    "mocha": "^3.5.0"
   },
   "scripts": {
     "prepublish": "npm prune",
