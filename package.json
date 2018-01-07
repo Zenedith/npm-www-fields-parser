@@ -13,7 +13,7 @@
   "devDependencies": {
     "chai": "4.1.2",
     "istanbul": "0.4.5",
-    "mocha": "4.0.1"
+    "mocha": "4.1.0"
   },
   "scripts": {
     "prepublish": "npm prune",
